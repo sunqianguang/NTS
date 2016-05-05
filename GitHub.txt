@@ -1,0 +1,45 @@
+安装 
+git各平台安装包下载地址：http://git-scm.com/downloads
+
+相应的图形化工具：sourcetree
+
+基本配置：（飞为三种级别）
+
+系统级别
+
+用户级别
+
+文档级别
+
+配置个人的用户名和电邮
+
+	$ git config --global user.name"sunqianguang"
+	$ git config --global user.email"163.com"
+
+查看配置信息：
+	$ git config --list
+
+工作流程：
+
+克隆 Git 资源作为工作目录（或者自己新建一个工作目录并初始化为Git仓库）。
+在克隆的资源上添加或修改文件。
+如果其他人修改了，你可以更新资源。
+在提交前查看修改。
+提交修改。
+在修改完成后，如果发现错误，可以撤回提交并再次修改并提交。
+
+工作区、暂存区和版本库的理解
+
+你的本地仓库由 git 维护的三棵“树”组成。
+第一个是你的 工作目录，它持有实际文件；
+第二个是 缓存区（Index），它像个缓存区域，临时保存你的改动；
+最后是 HEAD，指向你最近一次提交后的结果。
+
+
+基本操作
+
+git init 新建一个仓库：
+    $ mkdir demo && cd demo 新建 demo 并到 demo下
+    $ git init
+
+git clone 克隆    
