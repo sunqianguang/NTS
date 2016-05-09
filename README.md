@@ -1,2 +1,2 @@
 # NTS
-GitHub 操作
+GitHub的操作流程
