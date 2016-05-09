@@ -1,0 +1,56 @@
+GitHub的整个流程
+
+history:查看你输入的git命令
+
+git log 看分之版本号
+
+工作区、暂存区和版本库的理解：
+    你的本地仓库由 git 维护的三棵“树”组成。
+        第一个是你的 工作目录，它持有实际文件；
+	    第二个是 缓存区（Index），它像个缓存区域，临时保存你的改动；
+	        最后是 HEAD，指向你最近一次提交后的结果。
+
+
+
+基本操作
+
+1 新建一个仓库   
+  $ git init
+  $ mkdir demo && cd demo
+
+2 如果已经有了仓库，可以直接clone到本地   clone : 克隆
+  $ git clone git@github.com:sunqianguang/NTS.git
+
+  git@github.com:sunqianguang/NTS.git 需要到GitHub上复制
+
+3 git add
+  可以将文件添加到缓存，
+  例：$ git add README.md    
+      $ git add -A
+      $ git add * 
+
+4 git status 可以查看当前版本库各个文件的状态（非常有用）
+
+5 git commit 
+  可以将缓存区内容添加到仓库中
+
+  $ git commit -m"add index.htmlOC"
+
+6 push到服务器
+  $ git push origin master  提交到主分支
+
+
+取消已经缓存的内容 ： git reset 
+  例：$ git reset HEAD -- hello.php
+  粗暴一点的：$ git reset -- hard 版本号
+
+  git rm   
+     $ git rm README.md
+
+配置alias别名：好处---方便简写命令
+
+  例：$ git config --global alias.st status
+      $ git config --global alias.ci commit
+      $ git config --global alias.co checkout
+      $ git config --global alias.br branch
+
